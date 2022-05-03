@@ -23,6 +23,36 @@
             </objects>
             <point key="canvasLocation" x="20" y="98"/>
         </scene>
+        <!--Add Event View Controller-->
+        <scene sceneID="5zy-Sa-Ft2">
+            <objects>
+                <viewController storyboardIdentifier="AddEventViewController" id="Wsc-w5-P0N" customClass="AddEventViewController" customModule="EventsApp_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n6U-NV-exM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SNI-vG-TZg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fz2-sC-sal"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fz2-sC-sal" firstAttribute="bottom" secondItem="SNI-vG-TZg" secondAttribute="bottom" id="5vY-Wf-Zrn"/>
+                            <constraint firstItem="Fz2-sC-sal" firstAttribute="trailing" secondItem="SNI-vG-TZg" secondAttribute="trailing" id="FoB-Zp-Gk1"/>
+                            <constraint firstItem="SNI-vG-TZg" firstAttribute="leading" secondItem="Fz2-sC-sal" secondAttribute="leading" id="Scc-Zz-pep"/>
+                            <constraint firstItem="SNI-vG-TZg" firstAttribute="top" secondItem="Fz2-sC-sal" secondAttribute="top" id="wD2-4O-Yz4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SNI-vG-TZg" id="6KC-8F-Ewh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWN-i3-G9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="98"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
