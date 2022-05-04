@@ -14,7 +14,7 @@ class AddEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-setupViews()
+        setupViews()
         viewModel.onUpdate = { [weak self] in
             self?.tableView.reloadData()
         }
@@ -62,8 +62,6 @@ extension AddEventViewController: UITableViewDataSource {
             cell.update(with: titleSubtitleCellViewModel)
             cell.subtitleTextField.delegate = self
             return cell
-        case .titleImage:
-            return UITableViewCell()
         }
     }
 }
@@ -75,7 +73,7 @@ extension AddEventViewController: UITextFieldDelegate {
         
         let point = textField.convert(textField.bounds.origin, to: tableView)
         if let indexPath = tableView.indexPathForRow(at: point) {
-        viewModel.updateCell(indexPath: indexPath, subtitle: text)
+            viewModel.updateCell(indexPath: indexPath, subtitle: text)
         }
         return true
     }
